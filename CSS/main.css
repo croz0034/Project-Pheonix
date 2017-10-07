@@ -1,0 +1,44 @@
+*{
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    text-align: center;
+}
+.leftBar{
+      width: 20%;
+    height: 100%;
+    float: left;
+    border: 5px outset #aaa;
+    text-align: center;
+    display: inline-block;
+}
+.leftBar p { border: 5px outset #bbb;
+    margin: 5px;
+    padding: 15px 0 15px 0;
+}
+.rightBar{
+    width: 20%;
+    height: 100%;
+    float: right;
+    border: 5px outset #aaa;
+    text-align: center;
+    display: inline-block;
+}
+
+.rightBar p { border: 5px outset #bbb;
+    margin: 5px;
+    padding: 15px 0 15px 0;
+}
+a :hover{
+    background-color: white;
+    border-style: inset;
+    color: black;
+}
+#last { 
+    border: 5px solid #aaa;}
+main {
+    width:55%;
+    display: inline-block;
+    margin: 15px
+    
+}
