@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', init);
+
 //////////////////// Waiver Checker
 function Waiver() {
     /////////////////////This is where you put the waivered people
@@ -35,6 +37,13 @@ ShieldSize = Shield (x, type);
 alert(ShieldSize); return category}
 
 //////////////////// Level Calculator
+function init(ev){
+    let div = document.querySelector("#Level");
+    div.addEventListener("click", klack);};
+    
+function klack(ev){
+   ev.currentTarget.classList.toggle("active");
+    Level();};
 function Level(){
     let credits = prompt("How many credits do you have in the class?")
     let xp = {level:0, next:0, tilNext:0};
@@ -51,5 +60,5 @@ function Level(){
     return xp
 };
 //////////////////// End of Level
-let element = document.getElementById("LevelBreakdown");
-element.textContent = "Hello!"
+
+

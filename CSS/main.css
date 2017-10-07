@@ -42,3 +42,9 @@ main {
     margin: 15px
     
 }
+
+.active {
+    background-color: white;
+    border-style: inset;
+    color: black;
+}
