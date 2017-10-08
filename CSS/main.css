@@ -3,6 +3,7 @@
     background-color: black;
     box-sizing: border-box;
     text-align: center;
+    padding: 15px;
 }
 .leftBar{
       width: 20%;
@@ -41,6 +42,9 @@ main {
     display: inline-block;
     margin: 15px
     
+}
+main img {
+    width: 100%;
 }
 
 .active {

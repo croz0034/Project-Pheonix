@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', init);
-
 //////////////////// Waiver Checker
 function Waiver() {
     /////////////////////This is where you put the waivered people
@@ -11,7 +10,6 @@ haswaiver = WaiveredPeople.indexOf(person);
     haswaiver >= 0? alert(person + " has signed a waver! Have fun swinging foam!") : alert (person + " has NOT signed a waver! Get on that >:\(");
     
 }
-
 /////////////////////Shield Size Calculator
 function ShieldCalc (){
 var x = prompt("what is the width of your shield?");
@@ -35,15 +33,7 @@ function Shield (x, type){
     return category;};
 ShieldSize = Shield (x, type);
 alert(ShieldSize); return category}
-
 //////////////////// Level Calculator
-function init(ev){
-    let div = document.querySelector("#Level");
-    div.addEventListener("click", klack);};
-    
-function klack(ev){
-   ev.currentTarget.classList.toggle("active");
-    Level();};
 function Level(){
     let credits = prompt("How many credits do you have in the class?")
     let xp = {level:0, next:0, tilNext:0};
@@ -59,6 +49,28 @@ function Level(){
     alert("You are level: "+ xp.level + " with: " + xp.next + " as your next goal, and "+ xp.tilNext+" credits until that next step. You can do it!")};
     return xp
 };
-//////////////////// End of Level
-
-
+//////////////////States
+/////////////////Stopped
+function init(ev){
+    let div = document.querySelector("#stopped");
+    div.addEventListener("click", s1);};
+function s1(ev){
+   ev.currentTarget.classList.toggle("active");
+    let img = document.getElementsByClassName("andy")[0];
+    img.src = "img/amtgard-andy/01-stopped.jpg";
+    let rules = document.getElementsByClassName("rules")[0];
+    rules.textContent = " (P 52) STOPPED: Player may not move their fee. Unless otherwise noted Magic and Abilities such as Teleport, Blink, Lost, Banish, etc. which allow or require movement fail when targeting a Stopped player. "; 
+///////////////////// learn to add 
+//    let credit = document.getElementsByClassName("rules")[0];
+//    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
+};
+/////////////////Frozen
+function frozen(){
+   ev.currentTarget.classList.toggle("active");
+    let img = document.getElementsByClassName("andy")[0];
+    img.src = "img/amtgard-andy/02-frozen.jpg";
+    let rules = document.getElementsByClassName("rules")[0];
+    rules.textContent = " (P 51) FROZEN: Player may not move, speak, or take any action. Can only be afected by mechanics that work on States in general (such as Release) or Frozen in specific (such as Shatter). Otherwise player and their equipment is not affected by combat, magic, etc."; };
+///////////////////// learn to add 
+//    let credit = document.getElementsByClassName("rules")[0];
+//    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
