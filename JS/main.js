@@ -1,3 +1,17 @@
+
+var homeDiveTarget = ["combat", "weapons", "armour", "magic", "spells", "states", "archer", "assassin", "barbarian", "bard", "druid", "healer", "monk", "scout", "warrior", "wizard", "monster", "paladin", "anti-paladin"];
+var state = ["01-stopped", "02-frozen", "03-insubstantial", "04-immune", "05-cursed" , "06-supressed" , "07-stunned" , "08-fragile" , "09-outOfGame"];
+var XP = [
+    {"class":"archer", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"assassin", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"barbarian", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"bard", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"druid", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"healer", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"monk", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"scoutr", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"warrior", "credits":0, "level":0, "next":0, "tilNext":0},
+    {"class":"wizard", "credits":0, "level":0, "next":0, "tilNext":0}];
 document.addEventListener('DOMContentLoaded', init);
 //////////////////// Waiver Checker
 function Waiver() {
@@ -49,28 +63,22 @@ function Level(){
     alert("You are level: "+ xp.level + " with: " + xp.next + " as your next goal, and "+ xp.tilNext+" credits until that next step. You can do it!")};
     return xp
 };
-//////////////////States
-/////////////////Stopped
-function init(ev){
-    let div = document.querySelector("#stopped");
-    div.addEventListener("click", s1);};
-function s1(ev){
-   ev.currentTarget.classList.toggle("active");
+//////////////////states button
+function SB(i){
     let img = document.getElementsByClassName("andy")[0];
-    img.src = "img/amtgard-andy/01-stopped.jpg";
-    let rules = document.getElementsByClassName("rules")[0];
-    rules.textContent = " (P 52) STOPPED: Player may not move their fee. Unless otherwise noted Magic and Abilities such as Teleport, Blink, Lost, Banish, etc. which allow or require movement fail when targeting a Stopped player. "; 
-///////////////////// learn to add 
-//    let credit = document.getElementsByClassName("rules")[0];
-//    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
+    img.src = 'img/amtgard-andy/' + state[i] + '.jpg';
+    let credit = document.getElementsByClassName("Grimisawesome")[0];
+    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
 };
-/////////////////Frozen
-function frozen(){
-   ev.currentTarget.classList.toggle("active");
+///////////////// index button
+function IB(i){
+    if (i > 5){
     let img = document.getElementsByClassName("andy")[0];
-    img.src = "img/amtgard-andy/02-frozen.jpg";
-    let rules = document.getElementsByClassName("rules")[0];
-    rules.textContent = " (P 51) FROZEN: Player may not move, speak, or take any action. Can only be afected by mechanics that work on States in general (such as Release) or Frozen in specific (such as Shatter). Otherwise player and their equipment is not affected by combat, magic, etc."; };
-///////////////////// learn to add 
-//    let credit = document.getElementsByClassName("rules")[0];
-//    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
+    img.src = 'img/amtgard-andy/' + homeDiveTarget[i] + '.jpg';
+    }    
+    let credit = document.getElementsByClassName("Grimisawesome")[0];
+    credit.textContent = "Shout out to Dylan Coulter for his awesome artwork!";
+ let dive = document.querySelector("#dive");
+dive.setAttribute("href", homeDiveTarget[i] + ".html");
+};
+////////////////// 

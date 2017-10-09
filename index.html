@@ -15,20 +15,19 @@
 <!------------------------Left Bar (JS mods this page)------------------------->
    <body>
    <div class = "leftBar">
+      <a href="index.html"> Roost </a>
        <h2> General Rules: </h2>
-       <p id="HL"> Hit Locations </p>
-       <h3> States </h3>
-       <p id="stopped"> Stopped</p>
-        <button onclick="frozen()"> Frozen </button>
-       <p id="insubstantial">Insubstantial</p>
-       <p id="immune">Immune</p>
-       <p id="cursed">Cursed</p>
-       <p id="supressed">Suppressed</p>
-       <p id="stunned">Stunned</p>
-       <p id="fragile">Fragile</p>
-       <p id="OOG">Out of Game</p>
-       <p></p>
-       <p id="Level"> Level Calculator</p>
+       <button onclick="IB(0)"> Combat Rules </button>
+       <button onclick="IB(1)"> Weapon / Shield Construction </button>
+       <button onclick="IB(2)"> Armour Rules </button>
+       <button onclick="IB(3)"> Armour Construction </button>
+       <button onclick="IB(4)"> Magic & Ability Rules </button>
+       <button onclick="IB(4)"> Spells & Abilities </button>
+       <button onclick="IB(5)"> States </button>
+       
+       <h2> Level: </h2>
+       <button onclick="Buttan(0)" id="nonEx"> Player Overview </button>
+       <button onclick="Buttan(0)"> Credit calculator </button>
     
     </div>
 <!-------------------------Main Area (to be filled by JS)---------------------->
@@ -39,6 +38,7 @@
         <div class="content">
            <img class="andy">
            <p class="rules"></p>
+           <a id ="dive"> Dive to Specifics</a>
            <p class="Grimisawesome"></p>
             
         </div>
@@ -47,20 +47,17 @@
 <!----------------------Right Bar (HTML links to Class Pages)------------------>
      <div class = "rightBar">
        <h2> Classes: </h2>
-           <p><a href="Archer.html">Archer</a></p>
-           <p><a href="Assasin.html">Assassin</a></p>
-           <p><a href="Barbarian.html">Barbarian</a></p>
-           <p><a href="Bard.html">Bard</a></p>
-           <p><a href="Druid.html">Druid</a></p>
-           <p><a href="Healer.html">Healer</a></p>
-           <p><a href="Monk.html">Monk</a></p>
-           <p><a href="Scout.html">Scout</a></p>
-           <p><a href="Warrior.html">Warrior</a></p>
-           <p><a href="Wizard.html">Wizard</a></p>
-        <h3> Restricted:</h3>
-            <p><a href="Monster.html">Monster</a></p>
-            <p><a href="Paladin.html">Paladin</a></p>
-            <p><a href="Anti-Paladin.html">Anti-Paladin</a></p>
+          <button onclick="IB(6)">Archer</button>
+           <button onclick="IB(7)">Assassin</button>
+           <button onclick="IB(8)">Barbarian</button>
+           <button onclick="IB(9)">Bard</button>
+           <button onclick="IB(10)">Druid</button>
+           <button onclick="IB(11)">Healer</button>
+           <button onclick="IB(12)">Monk</button>
+           <button onclick="IB(13)">Scout</button>
+           <button onclick="IB(14)">Warrior</button>
+           <button onclick="IB(15)">Wizard</button>
+      
    </div>
     <footer>
 
