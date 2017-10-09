@@ -1,17 +1,8 @@
 
 var homeDiveTarget = ["combat", "weapons", "armour", "magic", "spells", "states", "archer", "assassin", "barbarian", "bard", "druid", "healer", "monk", "scout", "warrior", "wizard", "monster", "paladin", "anti-paladin"];
 var state = ["01-stopped", "02-frozen", "03-insubstantial", "04-immune", "05-cursed" , "06-supressed" , "07-stunned" , "08-fragile" , "09-outOfGame"];
-var XP = [
-    {"class":"archer", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"assassin", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"barbarian", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"bard", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"druid", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"healer", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"monk", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"scoutr", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"warrior", "credits":0, "level":0, "next":0, "tilNext":0},
-    {"class":"wizard", "credits":0, "level":0, "next":0, "tilNext":0}];
+var XP = [];
+var target;
 document.addEventListener('DOMContentLoaded', init);
 //////////////////// Waiver Checker
 function Waiver() {
@@ -81,4 +72,13 @@ function IB(i){
  let dive = document.querySelector("#dive");
 dive.setAttribute("href", homeDiveTarget[i] + ".html");
 };
-////////////////// 
+////////////////// class button
+function CB (i){
+   let info = document.getElementsByClassName("l"+i)[0];
+    info.classList.toggle("hidden");
+target = i}
+
+function Andy(){
+    let andy = document.getElementsByClassName("content")[0];
+    andy.classList.toggle("hidden");
+}

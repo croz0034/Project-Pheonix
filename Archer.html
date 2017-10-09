@@ -18,34 +18,144 @@
       
        <a href="index.html"> Roost </a>
        <h2> Level: <h2>
-       <button onclick="CB(0)"> 1 </button>
-       <button onclick="CB(1)"> 2 </button>
-       <button onclick="CB(2)"> 3 </button>
-       <button onclick="CB(3)"> 4 </button>
-       <button onclick="CB(4)"> 5 </button>
-       <button onclick="CB(5)"> 6 </button>
-       <button onclick="CB(6)"> Look the Part </button>
+       <button onclick="CB(0)"> Look the Part </button>
+       <button onclick="CB(1)"> 1 </button>
+       <button onclick="CB(2)"> 2 </button>
+       <button onclick="CB(3)"> 3 </button>
+       <button onclick="CB(4)"> 4 </button>
+       <button onclick="CB(5)"> 5 </button>
+       <button onclick="CB(6)"> 6 </button>
        <button onclick="CB(7)"> Overview </button>
-       <h4 class="affect"> Sugested Gear:</h4>
+       <h4> Sugested Gear:</h4>
        <button onclick="CB(8)"> Weapons </button>
        <button onclick="CB(9)"> Armour </button>
     
     </div>
-<!-------------------------Main Area (to be filled by JS)---------------------->
+<!--------------------Main Area (to be filled by JS)---------------------->
        <main>
     <header>
-        <h1>Project Pheonix: Archer </h1>
-        
-        <div class="content">
-           <img class="andy">
+        <h1>Project Pheonix: Archer (p 31) </h1>
+<!------------------------Andy Projector--------------------------------->
+        <div class="content hidden">
+           <img class="andy" src="IMG/amtgard-andy/archer.jpg">
            <p class="rules"></p>
-           <a href="" class ="dive"> Dive to Specifics</a>
+           <a id ="dive"> Dive to Specifics</a>
            <p class="Grimisawesome"></p>
-            
         </div>
+<!------------------------ Class  Level Content ------------------------>
+          <div class="l0 hidden">
+               <h3> Pick 1:</h3>
+               <p> <strong>Destruction Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Destruction"</p>
+               <p> Incantation: "Destruction Arrow"</p>
+               <p> This arrow is Armour Destroying and Shield Destroying. Armour Destroying and Shield Destroying are applied after the normal effect of being hit with an arrow is applied.</p>
+               
+               <p> <strong>Pinning Arrow Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Pinning"</p>
+               <p> Incantation: "Pinning Arrow"</p>
+               <p> Engulfing. A player struck by this arrow is stopped for 30 seconds.</p>
+               
+               <p> <strong>Poison Arrow:</strong> (Type: specialty arrow, School: Death)</p>
+               <p> Material: Arrow with Green cover labeled "Poison"</p>
+               <p> Incantation: "Poison Arrow"</p>
+               <p> This arrow is Wounds Kill.</p>
+           </div> 
+           <div class="l1 hidden">
+               <p> <strong>Reload:</strong> (Type Verbal: School: Sorcery Range: Self Uses: 1/refresh, charge 3)</p>
+               <p> Incantation: "I nocked my arrows to my bow, I let them fly, my quiver is low. Now I pause to go reload." X 3</p>
+               <p> Effect: Player becomes Out of Game and may move about the field retrieving their arrows.</p>
+               <p>Limitation: Must stay at least 10' away from other players at all times. The player may only remove their Out of Game state in the location they started by stating, "I return with a full quiver" X3.</p>
+               <p> May ask reeve for assistance in retrieving arrows that are within 10' of other players.</p>
+               <h3> Pick 2:</h3>
+                     <p> <strong>Destruction Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Destruction"</p>
+               <p> Incantation: "Destruction Arrow"</p>
+               <p> This arrow is Armour Destroying and Shield Destroying. Armour Destroying and Shield Destroying are applied after the normal effect of being hit with an arrow is applied.</p>
+               
+               <p> <strong>Pinning Arrow Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Pinning"</p>
+               <p> Incantation: "Pinning Arrow"</p>
+               <p> Engulfing. A player struck by this arrow is stopped for 30 seconds.</p>
+               
+               <p> <strong>Poison Arrow:</strong> (Type: specialty arrow, School: Death)</p>
+               <p> Material: Arrow with Green cover labeled "Poison"</p>
+               <p> Incantation: "Poison Arrow"</p>
+               <p> This arrow is Wounds Kill.</p>
+           </div>
+           <div class="l2 hidden">
+               <p> <strong> Mend: </strong> (Type Verbal: School: Sorcery Range: Self Uses: 1/life)</p>
+               <p> Incantation: "I make this item whole again" X 3</p>
+               <p> effect: Destroyed item is repaired. One point of armour in one location is repaired.</p>
+           </div>
+           <div class="l3 hidden"> 
+               <h3> Pick 2:</h3>
+               <p> <strong>Destruction Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Destruction"</p>
+               <p> Incantation: "Destruction Arrow"</p>
+               <p> This arrow is Armour Destroying and Shield Destroying. Armour Destroying and Shield Destroying are applied after the normal effect of being hit with an arrow is applied.</p>
+               
+               <p> <strong>Pinning Arrow Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Pinning"</p>
+               <p> Incantation: "Pinning Arrow"</p>
+               <p> Engulfing. A player struck by this arrow is stopped for 30 seconds.</p>
+               
+               <p> <strong>Poison Arrow:</strong> (Type: specialty arrow, School: Death)</p>
+               <p> Material: Arrow with Green cover labeled "Poison"</p>
+               <p> Incantation: "Poison Arrow"</p>
+               <p> This arrow is Wounds Kill.</p>
+           </div>
+           <div class="l4 hidden">
+               <p> <strong>Suppression Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Arrow with purple head cover labeled ‘Suppression’</p>
+               <p> Incantation: Suppression Arrow”</p>
+               <p> Engulfing. A player struck by this arrow is Suppressed for
+30 seconds. </p>
+           </div>
+           <div class="l5 hidden"> 
+               <h3> Pick 2:</h3>
+               <p> <strong>Destruction Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Destruction"</p>
+               <p> Incantation: "Destruction Arrow"</p>
+               <p> This arrow is Armour Destroying and Shield Destroying. Armour Destroying and Shield Destroying are applied after the normal effect of being hit with an arrow is applied.</p>
+               
+               <p> <strong>Pinning Arrow Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material: Arrow with red cover labeled "Pinning"</p>
+               <p> Incantation: "Pinning Arrow"</p>
+               <p> Engulfing. A player struck by this arrow is stopped for 30 seconds.</p>
+               
+               <p> <strong>Poison Arrow:</strong> (Type: specialty arrow, School: Death)</p>
+               <p> Material: Arrow with Green cover labeled "Poison"</p>
+               <p> Incantation: "Poison Arrow"</p>
+               <p> This arrow is Wounds Kill.</p>
+           </div>
+           <div class="l6 hidden">
+               <p> <strong>Phase Arrow:</strong> (Type: specialty arrow, School: Sorcery)</p>
+               <p> Material:  Arrow with grey cover labeled ‘Phase’.</p>
+               <p> Incantation: "“Phase Arrow”"</p>
+               <p> This arrow does not interact with ongoing Magic or Abilities. Example: This arrow is not stopped by Stoneskin, Protection from Projectiles, and does not trigger the effects of Troll Blood, Undead Minion, Missile Block, or similar Magic or Abilities.</p>
+               <p> This arrow does not supercede the Frozen, Insubstantial, or Out of Game States. </p>
+               <p> <strong> Sniper </strong> (optional)(Type: Neutral, School Sorcery</p>
+               <p>Effect: Player may physically carry any number of Specialty Arrows of each type. The frequency of each type of Specialty Arrow Ability becomes 1/Life Charge x3.</p>
+               <p> Limitation: May not fire normal arrows. Only one type of Specialty Arrow may be charged at any given time.</p>
+           </div>
+<!--------------------------Got Lazy Here----------------------------->
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong> Orange </p>
+               <p> <strong> Armour: </strong> 2pts </p>
+               <p> <strong> Shield: </strong> None </p>
+               <p> <strong> Weapons: </strong> Dagger, Short, Bow. </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Reload 1/ref chargeX3, 2/3 (destruction, pinning, poison arrow)</p>
+               <p>2nd: Mend 1/life</p>
+               <p>3rd: 2/3 (destruction, pinning, poison arrow</p>
+               <p>4th: Suppression Arrow)</p>
+               <p>5th: Reload, 2/3 (destruction, pinning, poison arrow)</p>
+               <p>6th: Phase Arrow, (option: Sniper) </p>
+           </div>
+            
     </header>
       </main>
-<!----------------------Right Bar (HTML links to Class Pages)------------------>
+<!------------------Right Bar (HTML links to Class Pages)------------------>
      <div class = "rightBar">
          
        <button onclick="Level()"> Input Credits </button>
@@ -57,19 +167,15 @@
        <p class= "tilNext"> Place Holder</p>
        <button onclick="CB(7)"> Add Credit </button>
        <button onclick="CB(7)"> Remove Credit </button>
+       <button onclick="Andy()"> Show/Hide Andy</button>
        
        <h4> Strong Against:</h4>
-       <a href="barbarian.html"> Barbarian </a>
-       <a href="wizard.html"> Wizard </a>
+       <button onclick="IB(8)">Barbarian</button>
+       <button onclick="IB(15)">Wizard</button>
        <h4> Weak Against:</h4>
-       <a href="warrior.html"> Warrior </a>
-       <a href="bard.html"> Bard </a>
+       <button onclick="IB(14)">Warrior</button>
+       <button onclick="IB(9)">Bard</button>
    </div>
-    <footer>
-
-        <p>&copy;<time datetime="2017">2017</time> Your Name</p>
-      
-    </footer>
 </body>
   
 </html>
