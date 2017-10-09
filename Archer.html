@@ -12,29 +12,59 @@
 <link rel="stylesheet" href="CSS/main.css">
     <script src="JS/main.js" type="text/javascript"></script>
 </head>
-
+<!------------------------Left Bar (JS mods this page)------------------------->
    <body>
-   
+   <div class = "leftBar">
+      
+       <a href="index.html"> Roost </a>
+       <h2> Level: <h2>
+       <button onclick="CB(0)"> 1 </button>
+       <button onclick="CB(1)"> 2 </button>
+       <button onclick="CB(2)"> 3 </button>
+       <button onclick="CB(3)"> 4 </button>
+       <button onclick="CB(4)"> 5 </button>
+       <button onclick="CB(5)"> 6 </button>
+       <button onclick="CB(6)"> Look the Part </button>
+       <button onclick="CB(7)"> Overview </button>
+       <h4 class="affect"> Sugested Gear:</h4>
+       <button onclick="CB(8)"> Weapons </button>
+       <button onclick="CB(9)"> Armour </button>
+    
+    </div>
+<!-------------------------Main Area (to be filled by JS)---------------------->
+       <main>
     <header>
-       
-        <h1> Class: Archer</h1>
-              
+        <h1>Project Pheonix: Archer </h1>
+        
+        <div class="content">
+           <img class="andy">
+           <p class="rules"></p>
+           <a href="" class ="dive"> Dive to Specifics</a>
+           <p class="Grimisawesome"></p>
+            
+        </div>
     </header>
-
-    <main>
-        <button onclick="var Archer = Level()">
-        Enter Credits
-        </button>
-   
-   <div class="LevelBreakdown">
-       <p>
-           <script>
-           
-           </script>
-       </p>
+      </main>
+<!----------------------Right Bar (HTML links to Class Pages)------------------>
+     <div class = "rightBar">
+         
+       <button onclick="CB(7)"> Input Credits </button>
+       <h4> Level: </h4>
+       <p class ="level"> Place Holder</p>
+       <h4 class="affect"> Credits:</h4>
+       <p class ="credits"> Place Holder</p>
+       <h4> Credits Until Next Level:</h4>
+       <p class= "tilNext"> Place Holder</p>
+       <button onclick="CB(7)"> Add Credit </button>
+       <button onclick="CB(7)"> Remove Credit </button>
+       
+       <h4> Strong Against:</h4>
+       <a href="barbarian.html"> Barbarian </a>
+       <a href="wizard.html"> Wizard </a>
+       <h4> Weak Against:</h4>
+       <a href="warrior.html"> Warrior </a>
+       <a href="bard.html"> Bard </a>
    </div>
-    </main>
-     
     <footer>
 
         <p>&copy;<time datetime="2017">2017</time> Your Name</p>

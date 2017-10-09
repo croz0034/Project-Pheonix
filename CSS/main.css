@@ -30,10 +30,12 @@ button, a {
     display: inline-block;
 }
 
+/*
 .rightBar p { border: 5px outset #bbb;
     margin: 5px;
     padding: 15px 0 15px 0;
 }
+*/
 
 #last { 
     border: 5px solid #aaa;}
@@ -53,6 +55,5 @@ main img {
     color: black;
 }
 #nonEx {
-    color: black;
-    border: none;
+    color: black
 }
