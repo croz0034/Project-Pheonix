@@ -3,7 +3,6 @@
     background-color: black;
     box-sizing: border-box;
     text-align: center;
-    padding: 15px;
 }
 .leftBar{
       width: 20%;
@@ -13,9 +12,14 @@
     text-align: center;
     display: inline-block;
 }
-.leftBar p { border: 5px outset #bbb;
-    margin: 5px;
-    padding: 15px 0 15px 0;
+button, a { 
+    display:block;
+    border: 5px outset #bbb;
+    margin: 15px;
+    padding: 15px;
+    width:100%;
+    margin: 0;
+    margin-bottom: 15px;
 }
 .rightBar{
     width: 20%;
@@ -30,11 +34,7 @@
     margin: 5px;
     padding: 15px 0 15px 0;
 }
-a :hover{
-    background-color: white;
-    border-style: inset;
-    color: black;
-}
+
 #last { 
     border: 5px solid #aaa;}
 main {
@@ -51,4 +51,8 @@ main img {
     background-color: white;
     border-style: inset;
     color: black;
+}
+#nonEx {
+    color: black;
+    border: none;
 }
