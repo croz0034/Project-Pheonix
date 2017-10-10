@@ -55,9 +55,7 @@ main img {
     border-style: inset;
     color: black;
 }
-#nonEx {
-    color: black
-}
+.xp {text-align: center;}
 
 .hidden{
     display: none;

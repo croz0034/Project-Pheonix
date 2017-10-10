@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    <title>Blank Template</title>
+   
+<link rel="stylesheet" href="CSS/main.css">
+    <script src="JS/main.js" type="text/javascript"></script>
+</head>
+<!------------------------Left Bar (JS mods this page)------------------------->
+   <body>
+   <div class = "leftBar">
+      
+       <a href="index.html"> Roost </a>
+       <h2> Level: <h2>
+       <button onclick="CB(0)"> Look the Part </button>
+       <button onclick="CB(1)"> 1 </button>
+       <button onclick="CB(2)"> 2 </button>
+       <button onclick="CB(3)"> 3 </button>
+       <button onclick="CB(4)"> 4 </button>
+       <button onclick="CB(5)"> 5 </button>
+       <button onclick="CB(6)"> 6 </button>
+       <button onclick="CB(7)"> Overview </button>
+       <h4> Sugested Gear:</h4>
+       <button onclick="CB(8)"> Weapons </button>
+       <button onclick="CB(9)"> Armour </button>
+    
+    </div>
+<!--------------------Main Area (to be filled by JS)---------------------->
+       <main>
+    <header>
+        <h1>Project Pheonix: Barbarian </h1>
+        <h3>(p 33 )</h3>
+<!------------------------Andy Projector--------------------------------->
+        <div class="content ">
+           <img class="andy" src="IMG/amtgard-andy/barbarian.jpg">
+           <p class="rules"></p>
+           <a id ="dive"> Dive to Specifics</a>
+           <p class="Grimisawesome">Shout out to Dylan Coulter for his awesome artwork!</p>
+        </div>
+<!------------------------ Class  Level Content ------------------------>
+          <div class="l0 hidden">
+              <p> <strong>Blood and Thunder: </strong> (Type: Verbal, Range: Self, School: Spirit, Uses: 1/Refresh)</p>
+               <p> Material: White Strip </p>
+               <p> Incantation: : “Blood and Thunder!” </p>
+               <p> Effect:  Player gains Blessing Against Wounds </p>
+               <p> Limitation: Kill Trigger. </p>
+           </div> 
+           <div class="l1 hidden">
+               <p> <strong>Immune to Subdual: </strong> (Type: Trait)</p>
+               <p> Effect: Immune to Magic and Abilities from the Subdual School.</p>
+               
+               <p> <strong>Immune to Command: </strong> (Type: Trait)</p>
+               <p> Effect: Immune to Magic and Abilities from the Command School.</p>
+               
+               <p> <strong>Berserk: </strong> (Type: Trait, Sorcery)</p>
+               <p> Effect:  All weapons wielded in melee are Armor Breaking. </p>
+           </div>
+           <div class="l2 hidden">
+               <p> <strong>Fight After Death: </strong> (Type: Verbal, Range: Self, School: Sorcery, Uses: 1/Refresh)</p>
+               <p> Incantation: “Fight after death” immediately after dying </p>
+               <p> Effect: Player continues to fight for seven seconds after being killed. Players must Chant this time out loud. As per Chanting, failure to count immediately ends the effect. Players do not receive further Wounds during Fight After Death. Player’s melee weapons are Shield Crushing </p>
+               <p>Limitations: Players may not activate Abilities or Magic during Fight After Death. Players may not activate Fight After Death if they died while Suppressed, Stunned, Insubstantial, or Frozen. States on the player (Such as Stopped) persist until Fight After Death has ended and are then removed as per the rules for player death. Players may not achieve game objectives nor carry game items while affected by Fight After Death, though they may still kill other players even if that player is a game objective. </p>
+               <p> N: Reeves are encouraged to remove this ability from those who use it in an unsafe manner.</p>
+           </div>
+           <div class="l3 hidden"> 
+               <p> <strong>Adrenaline: </strong> (Type: Verbal, Range: Self, School: Spirit, Uses: Unlimited)</p>
+               <p> Incantation: “Adrenaline” <p>
+               <p> Effect: Player heals a wound. </p>
+               <p> Limitation: Kill Trigger </p>
+           </div>
+           <div class="l4 hidden">
+               <p> <strong>Fight After Death: </strong> (Type: Verbal, Range: Self, School: Sorcery, Uses: +1/Refresh for 2 total.)</p>
+               <p> Incantation: “Fight after death” immediately after dying </p>
+               <p> Effect: Player continues to fight for seven seconds after being killed. Players must Chant this time out loud. As per Chanting, failure to count immediately ends the effect. Players do not receive further Wounds during Fight After Death. Player’s melee weapons are Shield Crushing </p>
+               <p>Limitations: Players may not activate Abilities or Magic during Fight After Death. Players may not activate Fight After Death if they died while Suppressed, Stunned, Insubstantial, or Frozen. States on the player (Such as Stopped) persist until Fight After Death has ended and are then removed as per the rules for player death. Players may not achieve game objectives nor carry game items while affected by Fight After Death, though they may still kill other players even if that player is a game objective. </p>
+               <p> N: Reeves are encouraged to remove this ability from those who use it in an unsafe manner.</p>
+           </div>
+           <div class="l5 hidden"> 
+               <p> <strong>Brutal Strike: </strong> (Type: Verbal, Range: Unlimited, School: Death, Uses: 1/life)</p>
+               <p> Incantation: “And stay down!”</p>
+               <p> Effect: Victim is Cursed. Victim is also Suppressed for 30 seconds </p>
+               <p> Limitation: Wound Trigger.</p>
+           </div>
+           <div class="l6 hidden">
+              <p> <strong>Blood and Thunder: </strong> (Type: Verbal, Range: Self, School: Spirit, Uses: 2/Refresh)</p>
+              <p> Material: White Strip </p>
+              <p> Incantation: : “Blood and Thunder!” </p>
+              <p> Effect:  Player gains Blessing Against Wounds </p>
+              <p> Limitation: Kill Trigger. </p>
+           </div>
+<!--------------------------Got Lazy Here----------------------------->
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong>  White </p>
+               <p> <strong> Armour: </strong>  3pts </p>
+               <p> <strong> Shield: </strong> Medium </p>
+               <p> <strong> Weapons: </strong>  All Melee, Javelins, Rocks </p>
+               <p> <strong> Look the Part: </strong> Blood and Thunder </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Immune to Subdual, Immune to Command, Berserk</p>
+               <p>2nd: Fight after Death 1/ref</p>
+               <p>3rd: Adrenaline Unlimited</p>
+               <p>4th: Fight after Death +1/ref</p>
+               <p>5th: Brutal Strike 1/life</p>
+               <p>6th: Blood and Thunder 2/ref</p>
+           </div>
+            
+    </header>
+      </main>
+<!------------------Right Bar (HTML links to Class Pages)------------------>
+     <div class = "rightBar">
+         
+       <button onclick="Level()"> Input Credits </button>
+       <h4> Level: </h4>
+       <p class ="barbarian xp lv"> 0</p>
+       <h4> Credits:</h4>
+       <p class ="barbarian xp credits"> 0</p>
+       <h4> Credits Until Next Level:</h4>
+       <p class= "barbarian xp tilNext"> 0</p>
+       
+       
+       <button> Barbarians have no Charge Abilities </button>
+       <button onclick="Andy()"> Show/Hide Andy</button>
+       
+       <h4> Strong Against:</h4>
+           <button onclick="IB(11)">Healer</button>
+           <button onclick="IB(13)">Scout</button>
+       <h4> Weak Against:</h4>
+          <button onclick="IB(6)">Archer</button>
+           <button onclick="IB(15)">Wizard</button>
+   </div>
+</body>
+  
+</html>
+
+

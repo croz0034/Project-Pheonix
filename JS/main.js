@@ -1,7 +1,7 @@
-
+var genRules = ["img/amtgard-andy/00-intro.jpg", "place holders"]
 var homeDiveTarget = ["combat", "weapons", "armour", "magic", "spells", "states", "archer", "assassin", "barbarian", "bard", "druid", "healer", "monk", "scout", "warrior", "wizard", "monster", "paladin", "anti-paladin"];
 var state = ["01-stopped", "02-frozen", "03-insubstantial", "04-immune", "05-cursed" , "06-supressed" , "07-stunned" , "08-fragile" , "09-outOfGame"];
-var XP = [];
+var XP;
 var target;
 document.addEventListener('DOMContentLoaded', init);
 //////////////////// Waiver Checker
@@ -41,17 +41,20 @@ alert(ShieldSize); return category}
 //////////////////// Level Calculator
 function Level(){
     let credits = prompt("How many credits do you have in the class?")
-    let xp = {level:0, next:0, tilNext:0};
+    let xp = {"level":0, "next":0, "tilNext":0};
     if (credits > 0 && credits < 5 ){xp.level = 1; xp.next=2; xp.tilNext= 5 - credits;}
     else if (credits > 5 && credits < 12){xp.level = 2; xp.next=3; xp.tilNext= 12 - credits;}
     else if (credits > 12 && credits < 21){xp.level = 3; xp.next=4; xp.tilNext= 21 - credits;}
     else if (credits > 21 && credits < 34 ){xp.level = 4; xp.next=5; xp.tilNext= 34 - credits;}
     else if (credits > 34 && credits < 53){xp.level = 5; xp.next=6; xp.tilNext= 53 - credits;}
     else if (credits >= 53) {xp.level = 6; xp.next="Silver Trim!"; xp.tilNext=" Mastery of the class ;)"}
-    else {alert('that is not a number')};
-    if (xp.level == 6){ alert("You are level 6 already :)")}
-    else if (xp.level >=1){
-    alert("You are level: "+ xp.level + " with: " + xp.next + " as your next goal, and "+ xp.tilNext+" credits until that next step. You can do it!")};
+    else {};
+    let output1 = document.getElementsByClassName("lv")[0];
+    output1.textContent = xp.level;    
+    let output2 = document.getElementsByClassName("credits")[0];
+    output2.textContent = credits;
+    let output3 = document.getElementsByClassName("tilNext")[0];
+    output3.textContent = xp.tilNext;
     return xp
 };
 //////////////////states button
@@ -63,6 +66,10 @@ function SB(i){
 };
 ///////////////// index button
 function IB(i){
+    if (i <= 5){
+    let img = document.getElementsByClassName("andy")[0];
+    img.src = genRules[i]; 
+    }
     if (i > 5){
     let img = document.getElementsByClassName("andy")[0];
     img.src = 'img/amtgard-andy/' + homeDiveTarget[i] + '.jpg';
@@ -72,12 +79,17 @@ function IB(i){
  let dive = document.querySelector("#dive");
 dive.setAttribute("href", homeDiveTarget[i] + ".html");
 };
-////////////////// class button
+function Buttan(){
+        let img = document.getElementsByClassName("andy")[0];
+    img.src = null;
+        let credit = document.getElementsByClassName("Grimisawesome")[0];
+    credit.textContent = "We store a record of every player's credits or 'XP' if you prefer that term online at (https://amtgard.com/ork/orkui/) "+" To find your credits, you must first find your kingdom! (If you're reading this you're probably a part of the principality of the nine blades... You can find us at the top of the principalities section at the bottom of the page) "+" From there, choose your home park (mine is Felfrost) "+" Then click search players and type the name you sign in with. Your name should appear on the list, good luck!";
+}
+////////////////// class page buttons
 function CB (i){
    let info = document.getElementsByClassName("l"+i)[0];
     info.classList.toggle("hidden");
 target = i}
-
 function Andy(){
     let andy = document.getElementsByClassName("content")[0];
     andy.classList.toggle("hidden");
