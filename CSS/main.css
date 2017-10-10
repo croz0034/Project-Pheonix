@@ -11,7 +11,7 @@ strong{
 }
 
 .leftBar{
-    width: 25%;
+    width: 20%;
     height: 100%;
     float: left;
     border: 5px outset #aaa;
@@ -19,7 +19,7 @@ strong{
     display: inline-block;
 }
 .rightBar{
-    width: 25%;
+    width: 20%;
     height: 100%;
     float: right;
     border: 5px outset #aaa;
@@ -40,7 +40,7 @@ button, a {
 #last { 
     border: 5px solid #aaa;}
 main {
-    width:35%;
+    width:55%;
     display: inline-block;
     margin: 1%; }
 main img {
