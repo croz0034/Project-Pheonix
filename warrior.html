@@ -12,12 +12,14 @@
 <link rel="stylesheet" href="CSS/main.css">
     <script src="JS/main.js" type="text/javascript"></script>
 </head>
-<!------------------------Left Bar (JS mods this page)------------------------->
+<!------------------------Left Bar (JS mods this page)-------------------->
    <body>
    <div class = "leftBar">
       
        <a href="index.html"> Roost </a>
-       <h2> Level: <h2>
+       <h2> Abilities: <h2>
+       <button onclick="CB(7)"> Overview </button>
+       <button onclick="CB(10)"> Charge Incant </button>
        <button onclick="CB(0)"> Look the Part </button>
        <button onclick="CB(1)"> 1 </button>
        <button onclick="CB(2)"> 2 </button>
@@ -25,7 +27,6 @@
        <button onclick="CB(4)"> 4 </button>
        <button onclick="CB(5)"> 5 </button>
        <button onclick="CB(6)"> 6 </button>
-       <button onclick="CB(7)"> Overview </button>
        <h4> Sugested Gear:</h4>
        <button onclick="CB(8)"> Weapons </button>
        <button onclick="CB(9)"> Armour </button>
@@ -44,7 +45,27 @@
            <p class="Grimisawesome">Shout out to Dylan Coulter for his awesome artwork!</p>
         </div>
 <!------------------------ Class  Level Content ------------------------>
-          <div class="l0 hidden">
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong> Purple </p>
+               <p> <strong> Armour: </strong> 6pts </p>
+               <p> <strong> Shield: </strong> Large</p>
+               <p> <strong> Weapons: </strong> All Melee, Javelins </p>
+               <p> <strong> Look the Part: </strong> Insult 1/life </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Scavenge Unlimited</p>
+               <p>2nd: Harden 1/life </p>
+               <p>3rd: True Grit 2/ref </p>
+               <p>4th: Insult 1/life </p>
+               <p>5th: Shake it Off</p>
+               <p>6th: Ancestral Armour</p>
+           </div>
+           <div class="l10 hidden">
+               <p> <strong>Charge:</strong> (Type: Verbal, Target: Self, School: Game mechanic)</p>
+               <p> Incantation: Spell's Name, followed by: “Out of battle I pause to rest, I take some time to catch my breath. Return to me my fleeting power To aid me in my darkest hour.” X listed charge number</p>
+               <p> Effect: Restores one use of the spell in question</p>
+               <p>Limitation: May only be used on spells with a (Charge X) in their uses, and no uses remaining.</p>
+           </div>    
+           <div class="l0 hidden">
                <p> <strong>Insult:</strong> (Type: Verbal, Range: 20', School: Command, Uses: 1/life)</p>
                <p> Incantation: “I command thy attention sirrah” x3 </p>
                <p> Effect: Victim is unable to attack or cast magic at anyone other than the caster for 30 seconds. If the victim of insult is attacked or has magic cast on them by someone other than the caster, the victim of Insult becomes able to choose to attack the offending party as well.</p>
@@ -83,27 +104,7 @@
                <p> Incantation: “May this armor protect you from all forms of harm.” </p>
                <p> Effect: The effects of a Magic Ball, projectile, or weapon which just struck armor worn by the player are ignored, even if the object would not otherwise affect the armor. The armor loses one point of value in the location struck. This effect will not trigger if the armor has no points left in the location struck. Ancestral Armor is not expended after use and will continue to provide protection until removed with Dispel Magic or similar magic or abilities</p>
            </div>
-<!--------------------------Got Lazy Here----------------------------->
-           <div class="l7 hidden">
-               <p> <strong> Sash: </strong> Purple </p>
-               <p> <strong> Armour: </strong> 6pts </p>
-               <p> <strong> Shield: </strong> Large</p>
-               <p> <strong> Weapons: </strong> All Melee, Javelins </p>
-               <p> <strong> Look the Part: </strong> Insult 1/life </p>
-               <p><strong> Abilities</strong></p>
-               <p>1st: Scavenge Unlimited</p>
-               <p>2nd: Harden 1/life </p>
-               <p>3rd: True Grit 2/ref </p>
-               <p>4th: Insult 1/life </p>
-               <p>5th: Shake it Off</p>
-               <p>6th: Ancestral Armour</p>
-           </div>
-           <div class="l10 hidden">
-               <p> <strong>Charge:</strong> (Type: Verbal, Target: Self, School: Game mechanic)</p>
-               <p> Incantation: Spell's Name, followed by: “Out of battle I pause to rest, I take some time to catch my breath. Return to me my fleeting power To aid me in my darkest hour.” X listed charge number</p>
-               <p> Effect: Restores one use of the spell in question</p>
-               <p>Limitation: May only be used on spells with a (Charge X) in their uses, and no uses remaining.</p>
-           </div>            
+<!--------------------------Got Lazy Here----------------------------->        
     </header>
       </main>
 <!------------------Right Bar (HTML links to Class Pages)------------------>
@@ -118,8 +119,6 @@
        <h4> Credits Until Next Level:</h4>
        <p class= "warrior xp tilNext"> 0</p>
        
-       
-       <button onclick="CB(10)"> Charge Ability </button>
        <button onclick="Andy()"> Show/Hide Andy</button>
          
        <h4> Strong Against:</h4>

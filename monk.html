@@ -12,12 +12,14 @@
 <link rel="stylesheet" href="CSS/main.css">
     <script src="JS/main.js" type="text/javascript"></script>
 </head>
-<!------------------------Left Bar (JS mods this page)------------------------->
+<!------------------------Left Bar (JS mods this page)-------------------->
    <body>
    <div class = "leftBar">
       
        <a href="index.html"> Roost </a>
-       <h2> Level: <h2>
+       <h2> Abilities: <h2>
+       <button onclick="CB(7)"> Overview </button>
+       <button onclick="CB(10)"> Charge Incant </button>
        <button onclick="CB(0)"> Look the Part </button>
        <button onclick="CB(1)"> 1 </button>
        <button onclick="CB(2)"> 2 </button>
@@ -25,7 +27,6 @@
        <button onclick="CB(4)"> 4 </button>
        <button onclick="CB(5)"> 5 </button>
        <button onclick="CB(6)"> 6 </button>
-       <button onclick="CB(7)"> Overview </button>
        <h4> Sugested Gear:</h4>
        <button onclick="CB(8)"> Weapons </button>
        <button onclick="CB(9)"> Armour </button>
@@ -44,7 +45,27 @@
            <p class="Grimisawesome">Shout out to Dylan Coulter for his awesome artwork!</p>
         </div>
 <!------------------------ Class  Level Content ------------------------>
-          <div class="l0 hidden">
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong> Grey </p>
+               <p> <strong> Armour: </strong>  None</p>
+               <p> <strong> Shield: </strong> None</p>
+               <p> <strong> Weapons: </strong>  All Melee</p>
+               <p> <strong> Look the Part: </strong>  Heal 1/life </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Enlightened Soul, Missile Block</p>
+               <p>2nd: May use Heavy Thrown</p>
+               <p>3rd: Sanctuary 1/life Charge X5 </p>
+               <p>4th: Heal 1/life Charge X3</p>
+               <p>5th: Resurrect 1/ref Charge X10</p>
+               <p>6th: Magic Ball Block </p>
+           </div>
+           <div class="l10 hidden">
+               <p> <strong>Charge:</strong> (Type: Verbal, Target: Self, School: Game mechanic)</p>
+               <p> Incantation: Spell's Name, followed by: “Out of battle I pause to rest, I take some time to catch my breath. Return to me my fleeting power To aid me in my darkest hour.” X listed charge number</p>
+               <p> Effect: Restores one use of the spell in question</p>
+               <p>Limitation: May only be used on spells with a (Charge X) in their uses, and no uses remaining.</p>
+           </div>        
+           <div class="l0 hidden">
                <p> <strong>Heal: </strong> (Type: Spirit, Range: Self, School: Spirit, Uses: 1/life)</p>
                <p> Incantation: “Sword Cut, spear stab, mace smash, arrow jab, <br /> Let the white light of healing descend on thee. <br /> Let the white light of healing stop thy spilling blood. <br /> Let the white light of healing mend thy bones. <br /> Let the white light of healing close thy wounds. <br /> Let the white light of healing restore thy vigor. <br /> The white light of healing hath healed thee.”</p>
                <p> Effect: Heal a Wound </p>
@@ -84,26 +105,6 @@
                <p>N: Engulfing effects from blocked Magic Balls do not activate.</p>
            </div>
 <!--------------------------Got Lazy Here----------------------------->
-           <div class="l7 hidden">
-               <p> <strong> Sash: </strong> Grey </p>
-               <p> <strong> Armour: </strong>  None</p>
-               <p> <strong> Shield: </strong> None</p>
-               <p> <strong> Weapons: </strong>  All Melee</p>
-               <p> <strong> Look the Part: </strong>  Heal 1/life </p>
-               <p><strong> Abilities</strong></p>
-               <p>1st: Enlightened Soul, Missile Block</p>
-               <p>2nd: May use Heavy Thrown</p>
-               <p>3rd: Sanctuary 1/life Charge X5 </p>
-               <p>4th: Heal 1/life Charge X3</p>
-               <p>5th: Resurrect 1/ref Charge X10</p>
-               <p>6th: Magic Ball Block </p>
-           </div>
-           <div class="l10 hidden">
-               <p> <strong>Charge:</strong> (Type: Verbal, Target: Self, School: Game mechanic)</p>
-               <p> Incantation: Spell's Name, followed by: “Out of battle I pause to rest, I take some time to catch my breath. Return to me my fleeting power To aid me in my darkest hour.” X listed charge number</p>
-               <p> Effect: Restores one use of the spell in question</p>
-               <p>Limitation: May only be used on spells with a (Charge X) in their uses, and no uses remaining.</p>
-           </div>        
     </header>
       </main>
 <!------------------Right Bar (HTML links to Class Pages)------------------>
@@ -118,8 +119,6 @@
        <h4> Credits Until Next Level:</h4>
        <p class= "monk xp tilNext"> 0</p>
        
-       
-       <button onclick="CB(10)"> Charge Ability </button>
        <button onclick="Andy()"> Show/Hide Andy</button>
             
        <h4> Strong Against:</h4>

@@ -17,7 +17,9 @@
    <div class = "leftBar">
       
        <a href="index.html"> Roost </a>
-       <h2> Level: <h2>
+       <h2> Abilities: <h2>
+       <button onclick="CB(7)"> Overview </button>
+       <button onclick="CB(10)"> Charge Incant </button>
        <button onclick="CB(0)"> Look the Part </button>
        <button onclick="CB(1)"> 1 </button>
        <button onclick="CB(2)"> 2 </button>
@@ -25,7 +27,6 @@
        <button onclick="CB(4)"> 4 </button>
        <button onclick="CB(5)"> 5 </button>
        <button onclick="CB(6)"> 6 </button>
-       <button onclick="CB(7)"> Overview </button>
        <h4> Sugested Gear:</h4>
        <button onclick="CB(8)"> Weapons </button>
        <button onclick="CB(9)"> Armour </button>
@@ -44,7 +45,28 @@
            <p class="Grimisawesome">Shout out to Dylan Coulter for his awesome artwork!</p>
         </div>
 <!------------------------ Class  Level Content ------------------------>
-          <div class="l0 hidden">
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong> Black </p>
+               <p> <strong> Armour: </strong> 2pts </p>
+               <p> <strong> Shield: </strong> None </p>
+               <p> <strong> Weapons: </strong> Dagger, Short, Long, Light Thrown, Heavy Thrown, Bow. </p>
+               <p> <strong> Look the Part: </strong> Poison 1/life </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Assassinate (unlimited), Shadow Step 2/life</p>
+               <p>2nd: Poison 1/life Charge 3</p>
+               <p>3rd: Blink 2/life </p>
+               <p>4th: Hold Person 1/life</p>
+               <p>5th: Teleport 2/life </p>
+               <p>6th: Coup De Grace </p>
+           </div>
+           <div class="l10 hidden">
+               <p> <strong>Charge:</strong> (Type: Verbal, Target: Self, School: Game mechanic)</p>
+               <p> Incantation: Spell's Name, followed by: “Out of battle I pause to rest, I take some time to catch my breath. Return to me my fleeting power To aid me in my darkest hour.” X listed charge number</p>
+               <p> Effect: Restores one use of the spell in question</p>
+               <p>Limitation: May only be used on spells with a (Charge X) in their uses, and no uses remaining.</p>
+           </div>
+                       
+           <div class="l0 hidden">
                <p> <strong>Poison</strong> (Type: Enchantment, Range: Self, School: Death, Uses: 1/life)</p>
                <p> Material:  Red strip</p>
                <p> Incantation: "“I coat these weapons with a deadly poison” x2"</p>
@@ -130,7 +152,6 @@
        <p class= "assassin xp tilNext"> 0</p>
        
        
-       <button onclick="CB(10)"> Charge Ability </button>
        <button onclick="Andy()"> Show/Hide Andy</button>
        
        <h4> Strong Against:</h4>

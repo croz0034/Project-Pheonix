@@ -12,12 +12,14 @@
 <link rel="stylesheet" href="CSS/main.css">
     <script src="JS/main.js" type="text/javascript"></script>
 </head>
-<!------------------------Left Bar (JS mods this page)------------------------->
+<!------------------------Left Bar (JS mods this page)-------------------->
    <body>
    <div class = "leftBar">
       
        <a href="index.html"> Roost </a>
-       <h2> Level: <h2>
+       <h2> Abilities: <h2>
+       <button onclick="CB(7)"> Overview </button>
+       <button onclick="CB(10)"> Barbarians Don't Charge! </button>
        <button onclick="CB(0)"> Look the Part </button>
        <button onclick="CB(1)"> 1 </button>
        <button onclick="CB(2)"> 2 </button>
@@ -25,7 +27,6 @@
        <button onclick="CB(4)"> 4 </button>
        <button onclick="CB(5)"> 5 </button>
        <button onclick="CB(6)"> 6 </button>
-       <button onclick="CB(7)"> Overview </button>
        <h4> Sugested Gear:</h4>
        <button onclick="CB(8)"> Weapons </button>
        <button onclick="CB(9)"> Armour </button>
@@ -44,7 +45,21 @@
            <p class="Grimisawesome">Shout out to Dylan Coulter for his awesome artwork!</p>
         </div>
 <!------------------------ Class  Level Content ------------------------>
-          <div class="l0 hidden">
+           <div class="l7 hidden">
+               <p> <strong> Sash: </strong>  White </p>
+               <p> <strong> Armour: </strong>  3pts </p>
+               <p> <strong> Shield: </strong> Medium </p>
+               <p> <strong> Weapons: </strong>  All Melee, Javelins, Rocks </p>
+               <p> <strong> Look the Part: </strong> Blood and Thunder </p>
+               <p><strong> Abilities</strong></p>
+               <p>1st: Immune to Subdual, Immune to Command, Berserk</p>
+               <p>2nd: Fight after Death 1/ref</p>
+               <p>3rd: Adrenaline Unlimited</p>
+               <p>4th: Fight after Death +1/ref</p>
+               <p>5th: Brutal Strike 1/life</p>
+               <p>6th: Blood and Thunder 2/ref</p>
+           </div>
+           <div class="l0 hidden">
               <p> <strong>Blood and Thunder: </strong> (Type: Verbal, Range: Self, School: Spirit, Uses: 1/Refresh)</p>
                <p> Material: White Strip </p>
                <p> Incantation: : “Blood and Thunder!” </p>
@@ -95,20 +110,6 @@
               <p> Limitation: Kill Trigger. </p>
            </div>
 <!--------------------------Got Lazy Here----------------------------->
-           <div class="l7 hidden">
-               <p> <strong> Sash: </strong>  White </p>
-               <p> <strong> Armour: </strong>  3pts </p>
-               <p> <strong> Shield: </strong> Medium </p>
-               <p> <strong> Weapons: </strong>  All Melee, Javelins, Rocks </p>
-               <p> <strong> Look the Part: </strong> Blood and Thunder </p>
-               <p><strong> Abilities</strong></p>
-               <p>1st: Immune to Subdual, Immune to Command, Berserk</p>
-               <p>2nd: Fight after Death 1/ref</p>
-               <p>3rd: Adrenaline Unlimited</p>
-               <p>4th: Fight after Death +1/ref</p>
-               <p>5th: Brutal Strike 1/life</p>
-               <p>6th: Blood and Thunder 2/ref</p>
-           </div>
             
     </header>
       </main>
@@ -123,8 +124,6 @@
        <h4> Credits Until Next Level:</h4>
        <p class= "barbarian xp tilNext"> 0</p>
        
-       
-       <button> Barbarians have no Charge Abilities </button>
        <button onclick="Andy()"> Show/Hide Andy</button>
        
        <h4> Strong Against:</h4>
