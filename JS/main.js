@@ -214,7 +214,6 @@ function abilityConstruct(Container, job){
             for (let i of abilities) {
             x = JSON.stringify(i["class/level"]);
             LTP =  JSON.stringify(job) + ':0';
-                console.log(LTP);
             L1 =  JSON.stringify(job) + ':1';
             L2 =  JSON.stringify(job) + ':2';
             L3 =  JSON.stringify(job) + ':3';
@@ -404,6 +403,8 @@ function filterSpells() {
         let x;
         filtervalue = AmtClass[filtervalue];
         abilityConstruct(container, filtervalue);
+        console.log(filtervalue)
+        console.log('^^ here ^^')
         
     } else if (filtervalue >= 20 && filtervalue < 30) {
         let query = filtervalue - 20;
