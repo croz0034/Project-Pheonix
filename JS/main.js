@@ -254,12 +254,14 @@ function abilityConstruct(){
         spellplate.classList.add("col-sm-1");
         spellplate.id = i.name;
         spellplate.info = i;
+        spellplate.addEventListener('click', classhop);
         spellplate.classList.add("cardstock");
+        CurrentRow.append(spellplate);
 //        spellplate.addEventListener("click", swaptoAbilities)
         CurrentRow.appendChild(spellplate);
         let spellname = document.createElement('p');
         spellname.textContent = i.name
-        CurrentRow.appendChild(spellname);
+        spellplate.appendChild(spellname);
      }
     
 }
@@ -400,7 +402,7 @@ function presence (part){
     }
 }
 ////////////////////////////Spell Filters
-function filterSpells(ev) {
+function filterSpells() {
     let df = document.createDocumentFragment();
     let container = document.getElementById("Ground2");
     container.innerHTML = "";
@@ -476,3 +478,65 @@ function filterSpells(ev) {
         container.appendChild(df);
     };}
 
+function classhop(ev){
+    console.log('yep')
+let classListings = document.getElementById('AmtgardClasses');
+    classListings.classList.remove('active');
+let abilityListings = document.getElementById('AmtgardSpells');
+    abilityListings.classList.add('active');
+let stateListings = document.getElementById('AmtgardStates');
+    stateListings.classList.remove('active');
+let past = document.getElementById('Ground1');
+    past.classList.remove('active');
+    past = document.getElementById('Ground3');
+    past.classList.remove('active');
+ let container = document.getElementById("Ground2");
+    container.classList.add('active');
+    
+    let Spell = this.info;
+    Jumbo(Spell); 
+    let df = document.createDocumentFragment();
+    container.innerHTML = "";
+    let searchBarUpdate = document.getElementById('jobs');
+    searchBarUpdate.innerHTML = ""
+    let datalist = document.createElement('datalist');
+    datalist.id = "jobs";
+    searchBarUpdate.appendChild(datalist);
+    let x = 0;
+    let CurrentRow = document.getElementById('Ground2');
+        let filtervalue = ClassTar;
+        let z = JSON.stringify(filtervalue);
+        console.log(z);
+        for (let i of abilities) {
+            x = JSON.stringify(i["class/level"]);
+            if (x.includes(z)) {
+                addSpell(i)
+            };
+        }
+        container.appendChild(df);
+        function addSpell(i) {
+        if (x % 3 == 0) {
+            CurrentRow = document.createElement("div");
+            CurrentRow.classList.add('row');
+            df.appendChild(CurrentRow);
+        } else {};
+        let spellplate = document.createElement('div');
+        spellplate.classList.add("col-sm-3");
+        spellplate.id = i.name;
+        spellplate.info = i;
+        spellplate.classList.add("cardstock");
+        spellplate.addEventListener("click", OnScreen)
+        CurrentRow.appendChild(spellplate);
+        document.createElement("p");
+        let spellname = document.createElement('p');
+        spellname.textContent = i.name
+        spellplate.appendChild(spellname);
+        let searchShortcut = document.createElement('option');
+        searchShortcut.value = i.name;
+        searchShortcut.info = i;
+        datalist.appendChild(searchShortcut);
+        x++;
+        i++;
+        container.appendChild(df);
+    };
+}
