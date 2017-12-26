@@ -4,61 +4,123 @@
 <head>
 
     <meta charset="UTF-8">
-       
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-    <title>Blank Template</title>
-   
-<link rel="stylesheet" href="CSS/main.css">
-    <script src="JS/main.js" type="text/javascript"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bootstrap Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="CSS/main.css">
+
 </head>
-<!------------------------Left Bar (JS mods this page)------------------------->
-   <body>
-   <div class = "leftBar">
-      <a href="index.html"> Roost </a>
-       <h2> General Rules: </h2>
-       <button onclick="IB(0)"> Combat Rules </button>
-       <button onclick="IB(1)"> Weapon / Shield Construction </button>
-       <button onclick="IB(2)"> Armour Rules </button>
-       <button onclick="IB(3)"> Armour Construction </button>
-       <button onclick="IB(4)"> Magic & Ability Rules </button>
-       <button onclick="IB(4)"> Spells & Abilities </button>
-       <button onclick="IB(5)"> States </button>
-       
-       <h2> Level: </h2>
-       <button onclick="Buttan()"> Where do I view my Credits? </button>
-       <button onclick="Level()"> Credit calculator </button>
-    
-    </div>
-<!-------------------------Main Area (to be filled by JS)---------------------->
-       <main>
-    <header>
-        <h1>Project Pheonix</h1>
-        
-        <div class="content">
-           <img class="andy" src="IMG/amtgard-andy/01-intro.jpg">
-           <p class="rules"> </p>
-           <a id ="dive"> Dive to Specifics</a>
-           <p class="Grimisawesome"> Welcome to "Project Pheonix!" Please click on the buttons for general information, and if you wish to learn more about a topic, click on the "Dive to Specifics" button featured above. You can always return to this home page by clicking the "Roost" button in the top left, and you can close data on the class pages by clicking the buttons a second time.</p>
-            
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsemenu" aria-controls="collapsemenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-    </header>
-      </main>
-<!----------------------Right Bar (HTML links to Class Pages)------------------>
-     <div class = "rightBar">
-       <h2> Classes: </h2>
-           <button onclick="IB(6)">Archer</button>
-           <button onclick="IB(7)">Assassin</button>
-           <button onclick="IB(8)">Barbarian</button>
-           <button onclick="IB(9)">Bard</button>
-           <button onclick="IB(10)">Druid</button>
-           <button onclick="IB(11)">Healer</button>
-           <button onclick="IB(12)">Monk</button>
-           <button onclick="IB(13)">Scout</button>
-           <button onclick="IB(14)">Warrior</button>
-           <button onclick="IB(15)">Wizard</button>
-      
-   </div>
+
+        <div class="collapse navbar-collapse" id="collapsemenu">
+            <ul class="navbar-nav mr-auto">
+                <a class="navbar-brand" href="#">Project Pheonix.</a>
+                <li class="nav-item" id="AmtgardClasses">
+                    <a class="nav-link"> Class List </a>
+                </li>
+                <li class="nav-item"  id="AmtgardSpells">
+                    <a class="nav-link"> Abilities </a>
+                </li>
+                <li class="nav-item" id="AmtgardStates">
+                    <a class="nav-link"> States </a>
+                </li>
+                <li>
+                                
+                    <fieldset>
+                        <div>
+                            <input id="Search-Bar" type="text" list="jobs">
+                            <datalist id="jobs">
+		                    <option value="Archer"></option>
+		                    <option value="Assassin"></option>
+		                    <option value="Barbarian"></option>
+		                    <option value="Monk"></option>
+		                    <option value="Scout"></option>
+		                    <option value="Warrior"></option>
+		                    <option value="Bard"></option>
+		                    <option value="Druid"></option>
+		                    <option value="Healer"></option>
+		                    <option value="Wizard"></option>
+		                    <option value="Anti-Paladin"></option>
+		                    <option value="Paladin"></option>
+		                </datalist>
+                            <button id="Search"> Search </button>
+                        </div>
+                    </fieldset>
+                          <fieldset id="magic">
+		            <select name="filter" id="filter">
+		                <option selected value=""> No Page Selected </option>
+		            </select>
+		            <button id="Filter"> Apply Filter</button>
+		  </fieldset>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main>
+        <!--    Both of these have the fluid option, but that sucks :P-->
+        <div class="jumbotron" id="Bridge">
+            <div class="container">
+                <h2 class="display-3"> Main View Screen</h2>
+                <p class="lead">Will Contain the ability selected.</p>
+            </div>
+        </div>
+
+        <div class="container" id="Ground0">
+            <div id="Ground1" class="active"></div>
+            <div id="Ground2"></div>
+ 
+           
+           
+           
+           
+           
+           
+           
+            <div id="Ground3"></div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+    
+<!--
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+-->
+
+
+    <script src="JS/main.js"></script>
+    <script src="JS/Abilities.js"></script>
 </body>
   
 </html>

@@ -1,60 +1,26 @@
-*{
-    color: white;
-    background-color: black;
-    box-sizing: border-box;
-    text-align: center;
-}
-p {text-align: left;}
 
-strong{
-    color: cornflowerblue;
-}
-
-.leftBar{
-    width: 20%;
-    height: 100%;
-    float: left;
-    border: 5px outset #aaa;
+#Ground0{
     text-align: center;
-    display: inline-block;
 }
-.rightBar{
-    width: 20%;
-    height: 100%;
-    float: right;
-    border: 5px outset #aaa;
-    text-align: center;
-    display: inline-block;
+#Ground1{display: none;
 }
-button, a { 
+#Ground1.active{
     display:block;
-    border: 5px outset #bbb;
-    margin: 15px;
-    padding: 5%;
-    width:100%;
-    margin: 0;
-    margin-bottom: 10%;
+}
+#Ground2{display: none;
+}
+#Ground2.active{
+    display:block;
+}
+#Ground3{display: none;
+}
+#Ground3.active{
+    display:block;
 }
 
-
-#last { 
-    border: 5px solid #aaa;}
-main {
-    width:55%;
-    display: inline-block;
-    margin: 1%; }
-main img {
-    max-width: 100%;
-    max-height: 80%;
-}
-
-.active {
-    background-color: white;
-    border-style: inset;
-    color: black;
-}
-.xp {text-align: center;}
-
-.hidden{
-    display: none;
+#Ground1 li{
+    width: 30%;
+    text-align: center;
+    padding: 0 40px;
+    display: inline;
 }
