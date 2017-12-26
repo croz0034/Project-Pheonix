@@ -154,8 +154,9 @@ function searchClasses(ev){
     ClassTar = query.value;
     let job = Credit[ClassTar];
     console.log(job);
+    console.log('this^^');
     levellingMatrix(job);
-    abilityConstruct(job);
+    abilityConstruct(document.getElementById('Ground1'), ClassTar);
 }
 function levellingMatrix(job){
     let xp = {"level":0, "next":0, "tilNext":0};
@@ -191,8 +192,10 @@ function Update(){
     levellingMatrix(newValue);
 }
 
-function abilityConstruct(){
-    let container = document.getElementById("Ground1");
+function abilityConstruct(Container, job){
+    console.log(Container);
+    console.log(job);
+    let container = Container;
     container.innerHTML = "";
     let CurrentRow;
     let x = 0;
@@ -210,13 +213,14 @@ function abilityConstruct(){
     
             for (let i of abilities) {
             x = JSON.stringify(i["class/level"]);
-            LTP =  JSON.stringify(ClassTar) + ':0';
-            L1 =  JSON.stringify(ClassTar) + ':1';
-            L2 =  JSON.stringify(ClassTar) + ':2';
-            L3 =  JSON.stringify(ClassTar) + ':3';
-            L4 =  JSON.stringify(ClassTar) + ':4';
-            L5 =  JSON.stringify(ClassTar) + ':5';
-            L6 =  JSON.stringify(ClassTar) + ':6';
+            LTP =  JSON.stringify(job) + ':0';
+                console.log(LTP);
+            L1 =  JSON.stringify(job) + ':1';
+            L2 =  JSON.stringify(job) + ':2';
+            L3 =  JSON.stringify(job) + ':3';
+            L4 =  JSON.stringify(job) + ':4';
+            L5 =  JSON.stringify(job) + ':5';
+            L6 =  JSON.stringify(job) + ':6';
                 
             if (x.includes(LTP)) {
                 CurrentRow = document.getElementById('lv0');
@@ -287,7 +291,6 @@ let stateListings = document.getElementById('AmtgardStates');
     let container = document.getElementById("Ground2");
     container.classList.add('active');
     PopulateFilter();
-    container.innerHTML = "";
     let searchBarUpdate = document.getElementById('jobs');
     searchBarUpdate.innerHTML = ""
     let datalist = document.createElement('datalist');
@@ -296,29 +299,10 @@ let stateListings = document.getElementById('AmtgardStates');
     let x = 0;
     let CurrentRow;
     for (let i of abilities) {
-        if (x % 3 == 0) {
-            CurrentRow = document.createElement("div");
-            CurrentRow.classList.add('row');
-            df.appendChild(CurrentRow);
-        } else {};
-        let spellplate = document.createElement('div');
-        spellplate.classList.add("col-sm-3");
-        spellplate.id = i.name;
-        spellplate.info = i;
-        spellplate.classList.add("cardstock");
-        spellplate.addEventListener("click", OnScreen)
-        CurrentRow.appendChild(spellplate);
-        document.createElement("p");
-        let spellname = document.createElement('p');
-        spellname.textContent = i.name
-        spellplate.appendChild(spellname);
         let searchShortcut = document.createElement('option');
         searchShortcut.value = i.name;
         searchShortcut.info = i;
         datalist.appendChild(searchShortcut);
-        x++;
-        i++;
-        container.appendChild(df);
     };
 }
 
@@ -419,14 +403,8 @@ function filterSpells() {
     if (filtervalue <= 19) {
         let x;
         filtervalue = AmtClass[filtervalue];
-        let z = JSON.stringify(filtervalue);
-        console.log(z);
-        for (let i of abilities) {
-            x = JSON.stringify(i["class/level"]);
-            if (x.includes(z)) {
-                addSpell(i)
-            };
-        }
+        abilityConstruct(container, filtervalue);
+        
     } else if (filtervalue >= 20 && filtervalue < 30) {
         let query = filtervalue - 20;
         for (let i of abilities) {
@@ -493,6 +471,7 @@ let past = document.getElementById('Ground1');
  let container = document.getElementById("Ground2");
     container.classList.add('active');
     
+    PopulateFilter();
     let Spell = this.info;
     Jumbo(Spell); 
     let df = document.createDocumentFragment();
@@ -500,7 +479,7 @@ let past = document.getElementById('Ground1');
     let searchBarUpdate = document.getElementById('jobs');
     searchBarUpdate.innerHTML = ""
     let datalist = document.createElement('datalist');
-    datalist.id = "jobs";
+    datalist.id = "spells";
     searchBarUpdate.appendChild(datalist);
     let x = 0;
     let CurrentRow = document.getElementById('Ground2');
@@ -513,13 +492,10 @@ let past = document.getElementById('Ground1');
                 addSpell(i)
             };
         }
+    
+    
         container.appendChild(df);
         function addSpell(i) {
-        if (x % 3 == 0) {
-            CurrentRow = document.createElement("div");
-            CurrentRow.classList.add('row');
-            df.appendChild(CurrentRow);
-        } else {};
         let spellplate = document.createElement('div');
         spellplate.classList.add("col-sm-3");
         spellplate.id = i.name;
@@ -531,12 +507,11 @@ let past = document.getElementById('Ground1');
         let spellname = document.createElement('p');
         spellname.textContent = i.name
         spellplate.appendChild(spellname);
+            
         let searchShortcut = document.createElement('option');
         searchShortcut.value = i.name;
         searchShortcut.info = i;
         datalist.appendChild(searchShortcut);
-        x++;
-        i++;
         container.appendChild(df);
     };
 }
