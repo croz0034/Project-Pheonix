@@ -1,8 +1,6 @@
 let AmtClass = ['Archer', 'Assassin', 'Barbarian', 'Monk', 'Scout', 'Warrior', 'Bard', 'Druid', 'Healer', 'Wizard', 'AntiPaladin', 'Paladin'];
 let Credit = {Archer: 1, Assassin: 2, Barbarian: 3, Monk: 4, Scout: 5, Warrior: 6, Bard: 7, Druid: 8, Healer: 9, Wizard: 10, AntiPaladin: 11, Paladin: 12};
-let ProtoOrk = "Tryeltech"
 let ClassTar = '';
-let abilitySet = '';
 let spellType = ["magic ball", "enchantment", "verbal", "specialty arrow", "neutral", "meta-magic"];
 let spellSchool = ["command", "death", "flame", "neutral", "protection", "sorcery", "spirit", "subdual"];
 let spellRange = ["magic ball", "self", "touch", "20 feet", "50 feet", "unlimited", "self or touch"];
@@ -13,6 +11,8 @@ let classListings = document.getElementById('AmtgardClasses');
 classListings.addEventListener('click', fetchClasses);
 let abilityListings = document.getElementById('AmtgardSpells');
 abilityListings.addEventListener('click', fetchSpells);
+//let abilityListings = document.getElementById('AmtgardStates');
+//abilityListings.addEventListener('click', fetchStates);
 let searchBar = document.getElementById('Search');
 searchBar.addEventListener('click', Search);
 let filterButton = document.getElementById('filter');
@@ -156,9 +156,9 @@ function PopulateSearch(){
     searchoptions.appendChild(option);
     }}
             if (three.classList == "active"){
-        for (job of AmtClass){
+        for (affliction of states){
     option = document.createElement('option');
-    option.value = job;
+    option.value = affliction;
     searchoptions.appendChild(option);
     }}
         
@@ -187,8 +187,6 @@ function searchClasses(ev){
     let query = document.getElementById('Search-Bar');
     ClassTar = query.value;
     let job = Credit[ClassTar];
-    console.log(job);
-    console.log('this^^');
     levellingMatrix(job);
     abilityConstruct(document.getElementById('Ground1'), ClassTar);
 }
@@ -258,6 +256,8 @@ function abilityConstruct(Container, job){
             if (x.includes(LTP)) {
                 CurrentRow = document.getElementById('lv0');
                 levelRig(i);
+                alert(i.name);
+                console.log('ability found');
             };   
             if (x.includes(L1)) {
                 CurrentRow = document.getElementById('lv1');
@@ -293,12 +293,11 @@ function abilityConstruct(Container, job){
         spellplate.info = i;
         spellplate.addEventListener('click', classhop);
         spellplate.classList.add("cardstock");
-        CurrentRow.append(spellplate);
-//        spellplate.addEventListener("click", swaptoAbilities)
-        CurrentRow.appendChild(spellplate);
         let spellname = document.createElement('p');
         spellname.textContent = i.name
         spellplate.appendChild(spellname);
+        
+        CurrentRow.appendChild(spellplate);
      }
     
 }
@@ -408,16 +407,6 @@ function Jumbo(i) {
         bridge.appendChild(forward);
         }
     }
-    
-
-
-function presence (part){
-    if (data){
-        let item = document.createElement('p');
-        item.textContent = Spell.part;
-        
-    }
-}
 ////////////////////////////Spell Filters
 function filterSpells() {
     let df = document.createDocumentFragment();
@@ -492,61 +481,20 @@ function filterSpells() {
     };}
 
 function classhop(ev){
-    console.log('yep')
-let classListings = document.getElementById('AmtgardClasses');
-    classListings.classList.remove('active');
-let abilityListings = document.getElementById('AmtgardSpells');
-    abilityListings.classList.add('active');
-let stateListings = document.getElementById('AmtgardStates');
-    stateListings.classList.remove('active');
-let past = document.getElementById('Ground1');
-    past.classList.remove('active');
-    past = document.getElementById('Ground3');
-    past.classList.remove('active');
- let container = document.getElementById("Ground2");
-    container.classList.add('active');
-    
-    PopulateFilter();
+    fetchSpells(ev);
     let Spell = this.info;
-    Jumbo(Spell); 
-    let df = document.createDocumentFragment();
-    container.innerHTML = "";
-    let searchBarUpdate = document.getElementById('jobs');
-    searchBarUpdate.innerHTML = ""
-    let datalist = document.createElement('datalist');
-    datalist.id = "spells";
-    searchBarUpdate.appendChild(datalist);
-    let x = 0;
-    let CurrentRow = document.getElementById('Ground2');
-        let filtervalue = ClassTar;
-        let z = JSON.stringify(filtervalue);
-        console.log(z);
-        for (let i of abilities) {
-            x = JSON.stringify(i["class/level"]);
-            if (x.includes(z)) {
-                addSpell(i)
-            };
-        }
+    Jumbo(Spell);
+   console.log(ClassTar);
+    abilityConstruct(document.getElementById('Ground2'), ClassTar);
+    
+ ///////////////////////////////////////////////////////////////////////////////////////////// Messy but might work
+ 
+
+}
+////////////////States///////////
+
+function fetchStates(){
     
     
-        container.appendChild(df);
-        function addSpell(i) {
-        let spellplate = document.createElement('div');
-        spellplate.classList.add("col-sm-3");
-        spellplate.id = i.name;
-        spellplate.info = i;
-        spellplate.classList.add("cardstock");
-        spellplate.addEventListener("click", OnScreen)
-        CurrentRow.appendChild(spellplate);
-        document.createElement("p");
-        let spellname = document.createElement('p');
-        spellname.textContent = i.name
-        spellplate.appendChild(spellname);
-            
-        let searchShortcut = document.createElement('option');
-        searchShortcut.value = i.name;
-        searchShortcut.info = i;
-        datalist.appendChild(searchShortcut);
-        container.appendChild(df);
-    };
+    
 }
