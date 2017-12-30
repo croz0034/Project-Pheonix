@@ -254,34 +254,33 @@ function abilityConstruct(Container, job){
             L6 =  JSON.stringify(job) + ':6';
                 
             if (x.includes(LTP)) {
-                CurrentRow = document.getElementById('lv0');
+                CurrentRow = container.querySelector('#lv0');
                 levelRig(i);
-                alert(i.name);
                 console.log('ability found');
             };   
             if (x.includes(L1)) {
-                CurrentRow = document.getElementById('lv1');
+                CurrentRow = container.querySelector('#lv1');
                 levelRig(i);
             }; 
             if (x.includes(L2)) {
-                CurrentRow = document.getElementById('lv2');
+                CurrentRow = container.querySelector('#lv2');
                 levelRig(i);
             }; 
             if (x.includes(L3)) {
-                CurrentRow = document.getElementById('lv3');
+                CurrentRow = container.querySelector('#lv3');
                 levelRig(i);
             }; 
             if (x.includes(L4)) {
-                CurrentRow = document.getElementById('lv4');
+                CurrentRow = container.querySelector('#lv4');
                 levelRig(i);
             }; 
     
             if (x.includes(L5)) {
-                CurrentRow = document.getElementById('lv5');
+                CurrentRow = container.querySelector('#lv5');
                 levelRig(i);
             }; 
             if (x.includes(L6)) {
-                CurrentRow = document.getElementById('lv6');
+                CurrentRow = container.querySelector('#lv6');
                 levelRig(i);
             }
                 ;}
@@ -296,7 +295,7 @@ function abilityConstruct(Container, job){
         let spellname = document.createElement('p');
         spellname.textContent = i.name
         spellplate.appendChild(spellname);
-        
+        if (CurrentRow.id == "lv0"){console.log(CurrentRow); console.log(spellplate)}
         CurrentRow.appendChild(spellplate);
      }
     
@@ -483,6 +482,8 @@ function filterSpells() {
 function classhop(ev){
     fetchSpells(ev);
     let Spell = this.info;
+    let clearSearch = document.getElementById('Search-Bar');
+    clearSearch.value = '';
     Jumbo(Spell);
    console.log(ClassTar);
     abilityConstruct(document.getElementById('Ground2'), ClassTar);
