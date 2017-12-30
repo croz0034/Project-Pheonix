@@ -15,8 +15,8 @@ let abilityListings = document.getElementById('AmtgardSpells');
 abilityListings.addEventListener('click', fetchSpells);
 let searchBar = document.getElementById('Search');
 searchBar.addEventListener('click', Search);
-let filterButton = document.getElementById('Filter');
-filterButton.addEventListener('click', filter);
+let filterButton = document.getElementById('filter');
+filterButton.addEventListener('change', filter);
 
 ///////////////// Populate ground 0
 //function fetchSpells(ev){
@@ -132,6 +132,38 @@ function PopulateFilter(){
     
 }
 
+function PopulateSearch(){
+    let searchoptions = document.getElementById('jobs');
+    searchoptions.innerHTML = ""
+    let option = document.createElement('option');
+    option.selected = "";
+    option.value = "";
+    searchoptions.appendChild(option);
+    let one = document.getElementById('Ground1');
+    let two = document.getElementById('Ground2');
+    let three = document.getElementById('Ground3');
+    
+    if (one.classList == "active"){
+        for (job of AmtClass){
+            option = document.createElement('option');
+    option.value = job;
+    searchoptions.appendChild(option);
+    }}
+    if (two.classList == "active"){
+        for (spell of abilities){
+            option = document.createElement('option');
+    option.value = spell.name;
+    searchoptions.appendChild(option);
+    }}
+            if (three.classList == "active"){
+        for (job of AmtClass){
+    option = document.createElement('option');
+    option.value = job;
+    searchoptions.appendChild(option);
+    }}
+        
+    }
+
 /////////////////////////////Classes 
 
 function fetchClasses(ev){
@@ -147,6 +179,8 @@ let abilityListings = document.getElementById('AmtgardSpells');
     past.classList.remove('active');
 let container = document.getElementById("Ground1");
     container.classList.add('active');
+    
+    PopulateSearch();
     PopulateFilter();
 }
 function searchClasses(ev){
