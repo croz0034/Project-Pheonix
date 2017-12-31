@@ -179,7 +179,6 @@ let abilityListings = document.getElementById('AmtgardSpells');
     past.classList.remove('active');
 let container = document.getElementById("Ground1");
     container.classList.add('active');
-    
     PopulateSearch();
     PopulateFilter();
 }
@@ -187,7 +186,10 @@ function searchClasses(ev){
     let query = document.getElementById('Search-Bar');
     ClassTar = query.value;
     let job = Credit[ClassTar];
-    levellingMatrix(job);
+     for(x of Classes){
+        let y = JSON.stringify(x);
+        if (y.includes(ClassTar)){ classJumbo(x)}
+    }
     abilityConstruct(document.getElementById('Ground1'), ClassTar);
 }
 function levellingMatrix(job){
@@ -199,24 +201,7 @@ function levellingMatrix(job){
     else if (job >= 34 && job < 53){xp.level = 5; xp.next=6; xp.tilNext= 53 - job;}
     else if (job >= 53) {xp.level = 6; xp.next="Silver Trim!"; xp.tilNext=" Mastery of the class ;)"}
     else {};
-    let table = document.getElementById('Bridge')
-    table.innerHTML= '';
-    let popBar = document.createElement('h4');
-    popBar.textContent = ClassTar;
-    table.appendChild(popBar);
-    let level = document.createElement('p');
-    level.id = "level";
-    level.textContent = "level: " + xp.level;
-    table.appendChild(level);
-    let credit = document.createElement('p');
-    credit.id = "credits";
-    credit.textContent = job;
-    credit.addEventListener('click', Update);
-    table.appendChild(credit);
-    let next = document.createElement('li');
-    next.id = "next";
-    next.textContent = xp.tilNext;
-    table.appendChild(next);
+    return xp
 };
 function Update(){
     let newValue = prompt('how many credits do you have?')
@@ -287,7 +272,7 @@ function abilityConstruct(Container, job){
     
     function levelRig(i){
         let spellplate = document.createElement('div');
-        spellplate.classList.add("col-sm-1");
+        spellplate.classList.add("col-sm-12");
         spellplate.id = i.name;
         spellplate.info = i;
         spellplate.addEventListener('click', classhop);
@@ -301,7 +286,41 @@ function abilityConstruct(Container, job){
     
 }
 
-
+function classJumbo(z){
+    console.log(z);
+    let experience = levellingMatrix(Credit[ClassTar]);
+    let bridge = document.getElementById('Bridge');
+    bridge.innerHTML = "";
+    let ClassSpecifics = document.createElement('h4');
+    ClassSpecifics.textContent = z.Name;
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Sash Colour: " + z.Sash;
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Max Armour: " + z.Armour;
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Largest Shield: " + z.Shield;
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Weapon Profficiencies: ";
+    for (p of z.Weapons){
+        ClassSpecifics.textContent = 
+        ClassSpecifics.textContent + ", " + p; 
+    }
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Level: " + experience.level;
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Credits: " + Credit[ClassTar];
+    bridge.appendChild(ClassSpecifics);
+    ClassSpecifics = document.createElement('p');
+    ClassSpecifics.textContent = "Cretits to go: " + experience.tilNext;
+    bridge.appendChild(ClassSpecifics);
+  
+}
 
 ////////////////////////////////Spells and Abilities/////////////////////
 /////////////////////////Setup/Initialize
@@ -460,7 +479,7 @@ function filterSpells() {
             df.appendChild(CurrentRow);
         } else {};
         let spellplate = document.createElement('div');
-        spellplate.classList.add("col-sm-3");
+        spellplate.classList.add("col-sm-12");
         spellplate.id = i.name;
         spellplate.info = i;
         spellplate.classList.add("cardstock");

@@ -2619,4 +2619,25 @@ let abilities = [{
 		"note": "If the caster attacks or begins casting another magic at the target, this spell’s effect is negated.",
 		"statelink": ""
 	},
+	{
+		"name": "Look the Part",
+		"class/level": [{
+			"Bard": 0
+		}, {
+			"Druid": 0
+		}, {
+			"Healer": 0
+		}, {
+			"Wizard": 0
+		}],
+		"type": 4,
+		"school": 3,
+		"range": 2,
+		"incant": [" ", ""],
+		"materials": "",
+		"effect": "If a caster qualifies for 'look the part' they gain an additional point of magic at their highest level.",
+		"limitations": "",
+		"note": "",
+		"statelink": ""
+	}
 ]
