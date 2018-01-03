@@ -1,6 +1,7 @@
 let AmtClass = ['Archer', 'Assassin', 'Barbarian', 'Monk', 'Scout', 'Warrior', 'Bard', 'Druid', 'Healer', 'Wizard', 'AntiPaladin', 'Paladin'];
 let Credit = {Archer: 1, Assassin: 2, Barbarian: 3, Monk: 4, Scout: 5, Warrior: 6, Bard: 7, Druid: 8, Healer: 9, Wizard: 10, AntiPaladin: 11, Paladin: 12};
 let ClassTar = '';
+let SpellTar = '';
 let spellType = ["magic ball", "enchantment", "verbal", "specialty arrow", "neutral", "meta-magic"];
 let spellSchool = ["command", "death", "flame", "neutral", "protection", "sorcery", "spirit", "subdual"];
 let spellRange = ["magic ball", "self", "touch", "20 feet", "50 feet", "unlimited", "self or touch"];
@@ -181,6 +182,12 @@ let container = document.getElementById("Ground1");
     container.classList.add('active');
     PopulateSearch();
     PopulateFilter();
+    if(ClassTar){ 
+    for(x of Classes){
+    abilityConstruct(document.getElementById('Ground1'), ClassTar);
+        let y = JSON.stringify(x);
+        if (y.includes(ClassTar)){ classJumbo(x)}
+    }}
 }
 function searchClasses(ev){
     let query = document.getElementById('Search-Bar');
@@ -345,6 +352,8 @@ let stateListings = document.getElementById('AmtgardStates');
     searchBarUpdate.innerHTML = ""
     let datalist = document.createElement('datalist');
     datalist.id = "jobs";
+    if (SpellTar){
+    Jumbo(SpellTar);};
     searchBarUpdate.appendChild(datalist);
     let x = 0;
     let CurrentRow;
@@ -375,7 +384,7 @@ function OnScreen(ev) {
 
 function Jumbo(i) {
     let Spell = i;
-
+    SpellTar = i;
     let bridge = document.getElementById('Bridge');
     bridge.innerHTML = "";
     let spellname = document.createElement('h4');
@@ -501,8 +510,6 @@ function filterSpells() {
 function classhop(ev){
     fetchSpells(ev);
     let Spell = this.info;
-    let clearSearch = document.getElementById('Search-Bar');
-    clearSearch.value = '';
     Jumbo(Spell);
    console.log(ClassTar);
     abilityConstruct(document.getElementById('Ground2'), ClassTar);
